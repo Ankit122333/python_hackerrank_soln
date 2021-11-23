@@ -1,0 +1,9 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+m,lst1=int(input()),set(input().split())
+#lst1=set(input().split())
+n,lst2=int(input()),set(input().split())
+#lst2=set(input().split())
+a=lst1.difference(lst2)
+b=lst2.difference(lst1)
+x=a.union(b)
+print('\n'.join(sorted(x,key=int)))
