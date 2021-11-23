@@ -1,0 +1,12 @@
+  
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    arr.sort()
+    maximum=arr[-1]
+    arr.sort(reverse=True)
+    for i in arr:
+        if i!=maximum:
+            result=i
+            print(result)
+            break
