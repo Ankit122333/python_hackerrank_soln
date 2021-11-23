@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict
+n,m=map(int,input().split())
+
+data1 = list()
+for i in range(n):
+    data1.append(input())
+    
+data2=list()
+for j in range(m):
+    data2.append(input())
+    
+d = defaultdict(list)
+for i in range(n):
+    d[data1[i]].append(i+1)
+
+for i in data2:    
+    if i in d:
+        print(*d[i])
+    else:
+        print(-1)
